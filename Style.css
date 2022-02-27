@@ -1,0 +1,60 @@
+* {
+  width: 400px;
+  position: absolute;
+}
+.container {
+  width: 400px;
+  position: relative;
+  margin-top: 35%;
+  margin-left: 135%;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg) rotateZ(-10deg);
+  animation: ror 20s linear infinite;
+}
+@keyframes ror {
+  50% {
+    transform: rotateX(30deg);
+  }
+  80% {
+    transform: rotateX(-30deg);
+  }
+}
+.images {
+  width: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotate 20s linear infinite;
+}
+@keyframes rotate {
+  from {
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+Img:nth-child(1) {
+  transform: rotateY(60deg) translateZ(400px);
+}
+Img:nth-child(2) {
+  transform: rotateY(120deg) translateZ(400px);
+}
+Img:nth-child(3) {
+  transform: rotateY(180deg) translateZ(400px);
+}
+Img:nth-child(4) {
+  transform: rotateY(240deg) translateZ(400px);
+}
+Img:nth-child(5) {
+  transform: rotateY(300deg) translateZ(400px);
+}
+Img:nth-child(6) {
+  transform: rotateY(360deg) translateZ(400px);
+}
+Img:hover {
+  width: 400px;
+  cursor: pointer;
+}
+body {
+  background-color: rgb(0, 140, 255);
+}
